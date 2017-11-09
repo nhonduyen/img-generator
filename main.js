@@ -59,7 +59,11 @@ for (let i = 100 - 1; i >= 0; i--) {
 	});
 
 }
-
+/******************************************************
+ *intent: generate random top left coordinate square
+ *input : max width of the picture
+ *output: top left coordinate square 
+*******************************************************/
 function getRandomRect(maxWidth) {
 	let x = Math.round(Math.random()* (maxWidth/4)) + 10;
 	let y = Math.round(Math.random()* (maxWidth/4)) + 10;
@@ -67,6 +71,11 @@ function getRandomRect(maxWidth) {
 	let rec = {x:x, y:y, width:width};
 	return rec;
 }
+/******************************************************
+ *intent: check if 2 sqare overlapped
+ *input : coordinate of 2 square
+ *output: true if overlapped, false if not
+*******************************************************/
 function checkOverlap(rect1, rect2) {
 	let rightBottom1 = {x: rect1.x + rect1.width, y: rect1.y - rect1.width};
 	let rightBottom2 = {x: rect2.x + rect2.width, y: rect2.y - rect2.width};
